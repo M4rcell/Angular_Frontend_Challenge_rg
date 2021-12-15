@@ -1,1 +1,12 @@
-<p>all works!</p>
+
+<div class="wrapper">
+    <mat-form-field appearance="outline" class="wrapper__select" >              
+        <mat-select [formControl]="selectNews">
+            <mat-option value="">Select your news</mat-option>
+            <mat-option *ngFor="let item of news" [value]="item.code">
+                <img class="wrapper__select--icon" [src]="item.image" alt=""> {{item.title}}
+            </mat-option>
+        </mat-select>                              
+    </mat-form-field>
+
+</div>

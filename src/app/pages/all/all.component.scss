@@ -1,0 +1,18 @@
+
+.wrapper{
+
+    &__select{
+        font-size: 12px;
+        width: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--icon{
+            width: 17px;
+            height: 17px;
+            margin-right: 12px;
+            margin-top: 10px;
+        }
+    }
+
+}
