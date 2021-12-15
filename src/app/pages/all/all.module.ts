@@ -6,6 +6,7 @@ import { AllComponent } from './all.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     FormsModule,
     MatSelectModule,
-     
+    MatIconModule,
+
   ]
 })
 export class AllModule { }
