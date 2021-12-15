@@ -1,0 +1,43 @@
+
+.body{
+    background-color: #fcfcfc;
+    width: 100vw;
+    height: 100vh;
+
+    &__tabs{
+        display: block;
+        text-align: center;
+        margin: 60px 0px;
+
+        &--tab{
+            font-family: Roboto;
+            padding: 3px 16px 0 17px;
+            font-size: 15px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.75;
+            letter-spacing: normal;
+            text-align: center;
+            border-radius: 2px;
+            border: solid 1px #d6d6d6;
+            color: #606060;
+           
+
+        }
+        &--tab:focus{
+            border: 2px solid hsl(207, 100%, 55%);
+            color: #1797ff;
+            font-weight: 500;
+        }       
+    }
+    &__pages{
+        border: 1px solid red;
+        margin: 5vw 10vh;
+      
+    }
+
+
+
+}
+
