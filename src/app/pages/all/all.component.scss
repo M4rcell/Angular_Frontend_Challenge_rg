@@ -22,7 +22,7 @@
         justify-content: space-around;
         &__card{
             width: 500px;
-            height: 90px;
+            height: auto;
             margin: 18px 30px 30px 10px;
             padding: 0 0 0 26px;
             opacity: 0.8;
@@ -35,6 +35,7 @@
 
         &__description{
             width: 90%;
+            height: auto;
             &--hour{
                 font-family: Roboto;
                 font-size: 11px;
@@ -72,11 +73,59 @@
             padding: 35px 22px 33px;
             border: solid 1px #f8f1f1;
             background-color: #f0e9e9;
+            border-radius: 0px 6px 6px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
            .mat-icon{
                 width: 24px;
                 height: 22px;
                 color: #dd0031;
+                cursor: pointer;
+            }
+           .mat-icon:active{
+                transform: scale(.9);
+            }
+           .mat-icon:hover{
+            color: #dd0031;
+            }
+        }
+    }
+    .loading{
+        display: block;
+        margin-top: 100px;
+        &__spinner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px; 
+        margin-bottom: 100px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .wrapper{
+
+        &__select{
+            font-size: 12px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--icon{
+                width: 17px;
+                height: 17px;
+                margin-right: 12px;
+                margin-top: 10px;
             }
         }
     }

@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyFavesComponent } from './my-faves.component';
 import { MyFavesRoutingModule } from './my-faves-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -11,7 +15,12 @@ import { MyFavesRoutingModule } from './my-faves-routing.module';
   ],
   imports: [
     CommonModule,
-    MyFavesRoutingModule
+    MyFavesRoutingModule,    
+    FormsModule,
+    MatSelectModule,
+    MatIconModule,
+    NgxPaginationModule,
+
   ]
 })
 export class MyFavesModule { }

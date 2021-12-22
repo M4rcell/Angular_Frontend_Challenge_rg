@@ -39,3 +39,16 @@
 
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+    
+.body{
+    
+    &__pages{
+        margin: 2vw 2vh;      
+    }
+
+
+
+}    
+
+}

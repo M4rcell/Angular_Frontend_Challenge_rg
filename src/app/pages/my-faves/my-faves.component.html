@@ -1,1 +1,28 @@
-<p>my-faves works!</p>
+
+    <div class="cards" *ngIf="favoriteList">
+        <div class="cards__card" *ngFor="let item of favoriteList| paginate: { 
+                                                    itemsPerPage: itemsPerPage,
+                                                    currentPage: currentPage,
+                                                    totalItems: totalItems }">
+            <div class="cards__description">
+                <p class="cards__description--hour" >
+                    <mat-icon>schedule</mat-icon>  
+                    {{item.created_at|date : 'h'}} hours ago by {{item['author']}}
+                </p>
+                <h5 class="cards__description--text">{{item['story_title']}}</h5>
+            </div>
+            <div class="cards__icon" (click)="addFavorites(item)">
+                <mat-icon>favorite</mat-icon>
+            </div>           
+        </div>
+        
+    </div>
+    <div class="pagination" >
+        <pagination-controls 
+            [responsive]="true"
+            previousLabel="" 
+            nextLabel="" 
+            (pageChange)="changePage($event)">
+        </pagination-controls>
+    </div>
+    <br>

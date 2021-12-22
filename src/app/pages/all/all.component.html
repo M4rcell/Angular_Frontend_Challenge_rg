@@ -9,27 +9,44 @@
         </mat-select>                              
     </mat-form-field>
 
-    <div class="cards">
-        <div class="cards__card">
-            <div class="cards__description">
-                <p class="cards__description--hour" ><mat-icon>schedule</mat-icon>2 hours ago by author</p>
-                <h5 class="cards__description--text">Event-driven state management in React using Storeon</h5>
+    <div *ngIf="news$ |async">
+        <div class="cards" *ngIf="newsArray; else default">
+            <div class="cards__card" *ngFor="let item of newsArray | paginate: { 
+                                                            itemsPerPage: itemsPerPage,
+                                                            currentPage: currentPage,
+                                                            totalItems: totalItems }">
+                <div class="cards__description">
+                    <p class="cards__description--hour" >
+                        <mat-icon>schedule</mat-icon>  
+                        {{item.created_at|date : 'h'}} hours ago by {{item['author']}}
+                    </p>
+                    <h5 class="cards__description--text">{{item['story_title']}}</h5>
+                </div>
+                <div class="cards__icon" (click)="addFavorites(item)">
+                    <mat-icon>favorite_border</mat-icon>
+                </div>           
             </div>
-            <div class="cards__icon">
-                <mat-icon>favorite</mat-icon>
-            </div>           
+    
         </div>
-        
-        <div class="cards__card">
-            <div class="cards__description">
-                <p class="cards__description--hour" ><mat-icon>schedule</mat-icon>2 hours ago by author</p>
-                <h5 class="cards__description--text">Event-driven state management in React using Storeon</h5>
+        <ng-template #default class="loading" >
+            <div class="loading__spinner">
+                <mat-spinner         
+                color="accent"
+                ></mat-spinner>            
             </div>
-            <div class="cards__icon">
-                <mat-icon>favorite_border</mat-icon>
-            </div>           
-        </div>
-
+        </ng-template>
     </div>
+
+
+    <div class="wrapper__pagination" >
+        <pagination-controls 
+            [responsive]="true"
+            previousLabel="" 
+            nextLabel="" 
+            (pageChange)="changePage($event)">
+        </pagination-controls>
+    </div>
+    <br>
+    
 
 </div>
