@@ -3,6 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { combineLatest, map, Observable, startWith, Subscription, take, tap } from 'rxjs';
+import { News } from 'src/app/models/news.model';
 import { NewsService } from 'src/app/services/news.service';
 
 @Component({
@@ -25,7 +26,7 @@ export class AllComponent implements OnInit,OnDestroy {
   page=0;
   changeNews: any;
 
-  newsArray!: Array<any[]> | any ;
+  newsArray: Array<News> | undefined ;
 
   itemsPerPage: any;
   currentPage: number=0;
@@ -60,6 +61,7 @@ export class AllComponent implements OnInit,OnDestroy {
       this.subscriptions.add(
         this.newsService.getNewsByFramework(this.changeNews,this.currentPage).subscribe(
           (res:any) => {
+            console.log('data ', res);
           this.newsArray = res['hits'];
           this.itemsPerPage = res['hitsPerPage'];
           this.currentPage = res['page'];

@@ -18,9 +18,9 @@
                 <div class="cards__description">
                     <p class="cards__description--hour" >
                         <mat-icon>schedule</mat-icon>  
-                        {{item.created_at|date : 'h'}} hours ago by {{item['author']}}
+                        {{item.created_at|date : 'h'}} hours ago by {{item.author}}
                     </p>
-                    <h5 class="cards__description--text">{{item['story_title']}}</h5>
+                    <h5 class="cards__description--text">{{item.story_title}}</h5>
                 </div>
                 <div class="cards__icon" (click)="addFavorites(item)">
                     <mat-icon>favorite_border</mat-icon>
