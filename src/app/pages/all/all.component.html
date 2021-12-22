@@ -9,7 +9,7 @@
         </mat-select>                              
     </mat-form-field>
 
-    <div *ngIf="news$ |async">
+    <div *ngIf="news$ |async; else errorPage">
         <div class="cards" *ngIf="newsArray; else default">
             <div class="cards__card" *ngFor="let item of newsArray | paginate: { 
                                                             itemsPerPage: itemsPerPage,
@@ -36,6 +36,11 @@
             </div>
         </ng-template>
     </div>
+    <ng-template #errorPage class="not-page" >
+        <div class="not-page__error">
+            <img class="not-page__error--img" src="../../../assets/images/404-error.jpg" alt="">         
+        </div>
+    </ng-template>
 
 
     <div class="wrapper__pagination" >

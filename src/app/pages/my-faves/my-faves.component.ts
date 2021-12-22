@@ -19,7 +19,7 @@ export class MyFavesComponent implements OnInit {
     const list:any = localStorage.getItem('favoriteList');    
     this.favoriteList = JSON.parse(list);
 
-    this.totalItems = this.favoriteList;
+    this.totalItems = this.favoriteList.length;
   }
 
   addFavorites(item:any):void{
