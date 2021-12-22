@@ -61,7 +61,6 @@ export class AllComponent implements OnInit,OnDestroy {
       this.subscriptions.add(
         this.newsService.getNewsByFramework(this.changeNews,this.currentPage).subscribe(
           (res:any) => {
-            console.log('data ', res);
           this.newsArray = res['hits'];
           this.itemsPerPage = res['hitsPerPage'];
           this.currentPage = res['page'];
