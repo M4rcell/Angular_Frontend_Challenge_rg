@@ -80,7 +80,12 @@
     
     .wrapper{
 
-     
+        .cards{
+            width: auto;
+            &__card{
+                width: 100%;
+            }
+        }  
     }
 
 }
