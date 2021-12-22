@@ -1,27 +1,27 @@
-# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+# Frontend News
+landing page news
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Librerias y package que se utilizo
+- Material Design : framework de CSS =>  ng add @angular/material.
+- Pagination for Angular : library =>  npm i ngx-pagination.
 
-## Code scaffolding
+### Frontend
+npm install => instalar packetes
+ng serve => ejecutar la aplicacion
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Backend
+https://hn.algolia.com/api/v1/
 
-## Build
+● Angular: https://hn.algolia.com/api/v1/search_by_date?query=angular&page=0
+● React: https://hn.algolia.com/api/v1/search_by_date?query=reactjs&page=0
+● Vuejs: https://hn.algolia.com/api/v1/search_by_date?query=vuejs&page=0
+## DEMO
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<div align="center"> 
+     <img width="80%"  src="https://github.com/M4rcell/Angular_Frontend_Challenge_rg/blob/main/src/assets/images/challenge-1.png" alt="About screen" title="About screen"></img> 
+     <img width="80%"  src="https://github.com/M4rcell/Angular_Frontend_Challenge_rg/blob/main/src/assets/images/challenge-2.png" alt="List screen" title="List screen"></img> 
+</div> 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
